@@ -16,7 +16,7 @@ Intended to export to only Windows, macOS is possible but I don't know the file 
 
 ## Credits
 
-[Askiisoft & Katana ZERO team](https://store.steampowered.com/app/460950/Katana_ZERO/) - Katana ZERO
+[Askiisoft](https://twitter.com/askiisoft) [& Katana ZERO team](https://store.steampowered.com/app/460950/Katana_ZERO/) - Katana ZERO
 
 [Speedrun.com](https://speedrun.com) - API and leaderboards
 
