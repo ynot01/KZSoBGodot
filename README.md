@@ -20,4 +20,4 @@ Intended to export to only Windows, macOS is possible but I don't know the file 
 
 [Speedrun.com](https://speedrun.com) - API and leaderboards
 
-ACherryJam - Original KZ SoB Calculator
+[ACherryJam](https://github.com/ACherryJam) - Original KZ SoB Calculator
