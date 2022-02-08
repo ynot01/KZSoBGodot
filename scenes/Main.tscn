@@ -1,0 +1,589 @@
+[gd_scene load_steps=64 format=2]
+
+[ext_resource path="res://btns/fifteen_idle_sheet.png" type="Texture" id=1]
+[ext_resource path="res://btns/fifteen_combat_sheet.png" type="Texture" id=2]
+[ext_resource path="res://btns/hardmode.png" type="Texture" id=3]
+[ext_resource path="res://btns/nohardmode.png" type="Texture" id=4]
+[ext_resource path="res://scripts/CheckButton.gd" type="Script" id=5]
+[ext_resource path="res://scripts/ItemList.gd" type="Script" id=6]
+[ext_resource path="res://scripts/GOGLink.gd" type="Script" id=7]
+[ext_resource path="res://scripts/SongTime.gd" type="Script" id=8]
+[ext_resource path="res://scripts/PopupDialog.gd" type="Script" id=9]
+[ext_resource path="res://scripts/HTTPRequest.gd" type="Script" id=10]
+[ext_resource path="res://scripts/AudioStreamPlayer.gd" type="Script" id=11]
+[ext_resource path="res://scripts/SteamLink.gd" type="Script" id=12]
+[ext_resource path="res://scripts/CheckBox.gd" type="Script" id=13]
+[ext_resource path="res://scripts/DMToggle.gd" type="Script" id=14]
+[ext_resource path="res://scripts/MoreInfo.gd" type="Script" id=15]
+[ext_resource path="res://scripts/JamStart.gd" type="Script" id=16]
+[ext_resource path="res://btns/electrohead_sheet.png" type="Texture" id=17]
+[ext_resource path="res://scripts/SongVolume.gd" type="Script" id=18]
+[ext_resource path="res://scripts/HMToggle.gd" type="Script" id=19]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 96, 132 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 96, 0, 96, 132 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 192, 0, 96, 132 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 288, 0, 96, 132 )
+
+[sub_resource type="AtlasTexture" id=5]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 384, 0, 96, 132 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 480, 0, 96, 132 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 576, 0, 96, 132 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 672, 0, 96, 132 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 768, 0, 96, 132 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 864, 0, 96, 132 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 960, 0, 96, 132 )
+
+[sub_resource type="AtlasTexture" id=12]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 1056, 0, 96, 132 )
+
+[sub_resource type="AtlasTexture" id=13]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 1152, 0, 96, 132 )
+
+[sub_resource type="SpriteFrames" id=14]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=15]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 108, 120 )
+
+[sub_resource type="AtlasTexture" id=16]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 108, 0, 108, 120 )
+
+[sub_resource type="AtlasTexture" id=17]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 216, 0, 108, 120 )
+
+[sub_resource type="AtlasTexture" id=18]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 324, 0, 108, 120 )
+
+[sub_resource type="AtlasTexture" id=19]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 432, 0, 108, 120 )
+
+[sub_resource type="AtlasTexture" id=20]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 540, 0, 108, 120 )
+
+[sub_resource type="AtlasTexture" id=21]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 648, 0, 108, 120 )
+
+[sub_resource type="AtlasTexture" id=22]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 756, 0, 108, 120 )
+
+[sub_resource type="AtlasTexture" id=23]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 864, 0, 108, 120 )
+
+[sub_resource type="AtlasTexture" id=24]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 972, 0, 108, 120 )
+
+[sub_resource type="AtlasTexture" id=25]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 1080, 0, 108, 120 )
+
+[sub_resource type="AtlasTexture" id=26]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 1188, 0, 108, 120 )
+
+[sub_resource type="SpriteFrames" id=27]
+animations = [ {
+"frames": [ SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="AtlasTexture" id=28]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 0, 0, 132, 180 )
+
+[sub_resource type="AtlasTexture" id=29]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 132, 0, 132, 180 )
+
+[sub_resource type="AtlasTexture" id=30]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 264, 0, 132, 180 )
+
+[sub_resource type="AtlasTexture" id=31]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 396, 0, 132, 180 )
+
+[sub_resource type="AtlasTexture" id=32]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 528, 0, 132, 180 )
+
+[sub_resource type="AtlasTexture" id=33]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 660, 0, 132, 180 )
+
+[sub_resource type="AtlasTexture" id=34]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 792, 0, 132, 180 )
+
+[sub_resource type="AtlasTexture" id=35]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 924, 0, 132, 180 )
+
+[sub_resource type="AtlasTexture" id=36]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 1056, 0, 132, 180 )
+
+[sub_resource type="AtlasTexture" id=37]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 1188, 0, 132, 180 )
+
+[sub_resource type="AtlasTexture" id=38]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 1320, 0, 132, 180 )
+
+[sub_resource type="AtlasTexture" id=39]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 1452, 0, 132, 180 )
+
+[sub_resource type="AtlasTexture" id=40]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 1584, 0, 132, 180 )
+
+[sub_resource type="AtlasTexture" id=41]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 1716, 0, 132, 180 )
+
+[sub_resource type="AtlasTexture" id=42]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 1848, 0, 132, 180 )
+
+[sub_resource type="AtlasTexture" id=43]
+flags = 4
+atlas = ExtResource( 17 )
+region = Rect2( 1980, 0, 132, 180 )
+
+[sub_resource type="SpriteFrames" id=44]
+animations = [ {
+"frames": [ SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ), SubResource( 38 ), SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[node name="Main" type="Control"]
+margin_left = 1.0
+margin_right = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 400.0
+margin_bottom = 832.0
+color = Color( 1, 1, 1, 0.0745098 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelList" type="GridContainer" parent="."]
+margin_right = 400.0
+margin_bottom = 832.0
+custom_constants/vseparation = 64
+custom_constants/hseparation = 0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Full Run" type="Button" parent="."]
+margin_left = 410.0
+margin_top = 8.0
+margin_right = 490.0
+margin_bottom = 63.0
+text = "Full Run"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Golden" type="Button" parent="."]
+margin_left = 410.0
+margin_top = 68.0
+margin_right = 490.0
+margin_bottom = 123.0
+text = "Golden"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Psycho" type="Button" parent="."]
+margin_left = 410.0
+margin_top = 128.0
+margin_right = 490.0
+margin_bottom = 183.0
+text = "Psycho"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HMToggle" type="TextureButton" parent="."]
+margin_left = 418.0
+margin_top = 200.0
+margin_right = 482.0
+margin_bottom = 264.0
+toggle_mode = true
+action_mode = 0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 3 )
+script = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DMToggle" type="TextureButton" parent="."]
+margin_left = 401.0
+margin_top = 280.0
+margin_right = 499.0
+margin_bottom = 412.0
+toggle_mode = true
+action_mode = 0
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FifteenIdle" type="AnimatedSprite" parent="DMToggle"]
+frames = SubResource( 14 )
+frame = 9
+playing = true
+centered = false
+
+[node name="FifteenCombat" type="AnimatedSprite" parent="DMToggle"]
+visible = false
+position = Vector2( 0, 9 )
+frames = SubResource( 27 )
+frame = 2
+playing = true
+centered = false
+
+[node name="Request" type="Button" parent="."]
+margin_left = 401.172
+margin_top = 645.707
+margin_right = 497.172
+margin_bottom = 700.707
+text = "Fetch WR/ILs"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckButton" type="CheckButton" parent="."]
+margin_left = 412.189
+margin_top = 719.227
+margin_right = 488.189
+margin_bottom = 759.227
+disabled = true
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+script = ExtResource( 10 )
+
+[node name="PopupDialog" type="PopupDialog" parent="."]
+margin_left = 50.0
+margin_top = 350.0
+margin_right = 450.0
+margin_bottom = 450.0
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="PopupDialog"]
+margin_right = 400.0
+margin_bottom = 100.0
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBtnLabel" type="Label" parent="."]
+margin_left = 405.2
+margin_top = 708.941
+margin_right = 495.2
+margin_bottom = 722.941
+text = "Toggle WR/ILs"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+visible = false
+margin_left = 403.49
+margin_top = 658.806
+margin_right = 495.49
+margin_bottom = 688.806
+max_value = 18.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox" type="CheckBox" parent="."]
+visible = false
+margin_left = 408.0
+margin_top = 779.0
+margin_right = 498.0
+margin_bottom = 824.0
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CBLabel" type="Label" parent="CheckBox"]
+margin_left = -1.10376
+margin_top = 11.0488
+margin_right = 89.8962
+margin_bottom = 49.0488
+text = "Show WR 
+instead of SoB"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MoreInfo" type="Button" parent="."]
+margin_left = 414.127
+margin_top = 759.545
+margin_right = 488.127
+margin_bottom = 779.545
+text = "More Info"
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SongTime" type="HSlider" parent="."]
+margin_left = 406.0
+margin_top = 600.0
+margin_right = 495.0
+margin_bottom = 616.0
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SongVolume" type="HSlider" parent="."]
+margin_left = 406.0
+margin_top = 621.0
+margin_right = 495.0
+margin_bottom = 637.0
+max_value = 80.0
+value = 80.0
+script = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="JamStart" type="TextureButton" parent="."]
+margin_left = 405.0
+margin_top = 428.0
+margin_right = 497.0
+margin_bottom = 600.0
+action_mode = 0
+button_mask = 3
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ElectroBop" type="AnimatedSprite" parent="JamStart"]
+position = Vector2( 45.9619, 75.6604 )
+frames = SubResource( 44 )
+
+[node name="FileDialog" type="FileDialog" parent="JamStart"]
+margin_right = 417.0
+margin_bottom = 379.0
+popup_exclusive = true
+window_title = "Open a Directory"
+resizable = true
+mode = 2
+access = 2
+show_hidden_files = true
+current_dir = "/"
+current_path = "/"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="JamStart"]
+script = ExtResource( 11 )
+
+[node name="Songname" type="Label" parent="JamStart"]
+margin_left = -3.0
+margin_top = -54.0
+margin_right = 93.0
+margin_bottom = 4.0
+valign = 2
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MoreInfoPop" type="PopupDialog" parent="."]
+margin_left = 26.5837
+margin_top = 218.286
+margin_right = 468.584
+margin_bottom = 618.286
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MoreInfoPop"]
+margin_left = 39.8316
+margin_top = 37.0
+margin_right = 407.832
+margin_bottom = 307.0
+text = "Big thanks to
+
+CherryJam for making the original SoB calculator and providing images
+
+Speedrun.com for their leaderboard API
+
+Askiisoft and LudoWic and the rest of the KZ team for making such a great game with an amazing OST
+
+
+
+
+
+Programmed and designed by ynot01"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SteamLink" type="LinkButton" parent="MoreInfoPop"]
+margin_left = 33.9406
+margin_top = 365.07
+margin_right = 417.941
+margin_bottom = 379.07
+text = "https://store.steampowered.com/app/460950/Katana_ZERO/"
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GOGLink" type="LinkButton" parent="MoreInfoPop"]
+margin_left = 33.9406
+margin_top = 349.178
+margin_right = 417.941
+margin_bottom = 363.178
+focus_mode = 2
+text = "https://www.gog.com/en/game/katana_zero"
+script = ExtResource( 7 )
+
+[node name="LinkLabel" type="Label" parent="MoreInfoPop"]
+margin_left = 34.9623
+margin_top = 330.552
+margin_right = 319.962
+margin_bottom = 344.552
+text = "You probably already have it, but just in case:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Full Run" to="LevelList" method="_on_Full_Run_pressed"]
+[connection signal="pressed" from="Golden" to="LevelList" method="_on_Golden_pressed"]
+[connection signal="pressed" from="Psycho" to="LevelList" method="_on_Psycho_pressed"]
+[connection signal="toggled" from="HMToggle" to="LevelList" method="_on_HMToggle_toggled"]
+[connection signal="toggled" from="DMToggle" to="LevelList" method="_on_DMToggle_toggled"]
+[connection signal="pressed" from="Request" to="HTTPRequest" method="_on_Request_pressed"]
+[connection signal="toggled" from="CheckButton" to="LevelList" method="_on_CheckButton_toggled"]
+[connection signal="toggled" from="CheckButton" to="CheckBox" method="_on_CheckButton_toggled"]
+[connection signal="request_completed" from="HTTPRequest" to="LevelList" method="_on_HTTPRequest_request_completed"]
+[connection signal="request_completed" from="HTTPRequest" to="HTTPRequest" method="_on_HTTPRequest_request_completed"]
+[connection signal="request_completed" from="HTTPRequest" to="CheckButton" method="_on_HTTPRequest_request_completed"]
+[connection signal="toggled" from="CheckBox" to="LevelList" method="_on_CheckBox_toggled"]
+[connection signal="gui_input" from="SongTime" to="JamStart" method="_on_SongTime_gui_input"]
+[connection signal="value_changed" from="SongVolume" to="JamStart" method="_on_SongVolume_value_changed"]
+[connection signal="dir_selected" from="JamStart/FileDialog" to="JamStart" method="_on_FileDialog_dir_selected"]

@@ -1,0 +1,188 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://levels/Factory.png" type="Texture" id=1]
+[ext_resource path="res://medals/none.png" type="Texture" id=2]
+[ext_resource path="res://fonts/ComFont.tres" type="DynamicFont" id=3]
+[ext_resource path="res://btns/zero_run_sheet.png" type="Texture" id=4]
+[ext_resource path="res://btns/fifteen_run_sheet.png" type="Texture" id=5]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 132, 96 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 4 )
+region = Rect2( 132, 0, 132, 96 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 4 )
+region = Rect2( 264, 0, 132, 96 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 4 )
+region = Rect2( 396, 0, 132, 96 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 4 )
+region = Rect2( 528, 0, 132, 96 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 4 )
+region = Rect2( 660, 0, 132, 96 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 4 )
+region = Rect2( 792, 0, 132, 96 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 4 )
+region = Rect2( 924, 0, 132, 96 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 4 )
+region = Rect2( 1056, 0, 132, 96 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 4 )
+region = Rect2( 1188, 0, 132, 96 )
+
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 138, 114 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 5 )
+region = Rect2( 138, 0, 138, 114 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 5 )
+region = Rect2( 276, 0, 138, 114 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 5 )
+region = Rect2( 414, 0, 138, 114 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 5 )
+region = Rect2( 552, 0, 138, 114 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 5 )
+region = Rect2( 690, 0, 138, 114 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 5 )
+region = Rect2( 828, 0, 138, 114 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 5 )
+region = Rect2( 966, 0, 138, 114 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 5 )
+region = Rect2( 1104, 0, 138, 114 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 5 )
+region = Rect2( 1242, 0, 138, 114 )
+
+[sub_resource type="SpriteFrames" id=22]
+animations = [ {
+"frames": [ SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
+"loop": true,
+"name": "default",
+"speed": 10.0
+} ]
+
+[node name="LevelCont" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.26935
+margin_top = 0.561218
+margin_right = 4.26935
+margin_bottom = -529.439
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BG" type="ColorRect" parent="."]
+margin_right = 400.0
+margin_bottom = 64.0
+color = Color( 0.243137, 0.305882, 0.345098, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Image" type="Sprite" parent="."]
+position = Vector2( 2, 2 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="ZeroRun" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 0.470261, 7.29732 )
+scale = Vector2( 0.542489, 0.542489 )
+frames = SubResource( 11 )
+frame = 5
+playing = true
+centered = false
+
+[node name="FifteenRun" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 0.410797, 0.52974 )
+scale = Vector2( 0.542489, 0.542489 )
+frames = SubResource( 22 )
+frame = 5
+playing = true
+centered = false
+
+[node name="Time" type="Label" parent="."]
+margin_left = 230.0
+margin_right = 340.0
+margin_bottom = 64.0
+custom_fonts/font = ExtResource( 3 )
+text = "-"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Medal" type="Sprite" parent="."]
+position = Vector2( 350, 8 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Deaths" type="Label" parent="."]
+margin_left = 349.47
+margin_top = 21.2433
+margin_right = 389.47
+margin_bottom = 44.2433
+custom_fonts/font = ExtResource( 3 )
+text = "0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Name" type="Label" parent="."]
+margin_left = 70.0
+margin_right = 230.0
+margin_bottom = 64.0
+custom_fonts/font = ExtResource( 3 )
+text = "Factory"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
