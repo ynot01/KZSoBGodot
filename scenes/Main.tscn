@@ -340,7 +340,7 @@ centered = false
 visible = false
 position = Vector2( 0, 9 )
 frames = SubResource( 27 )
-frame = 2
+frame = 7
 playing = true
 centered = false
 

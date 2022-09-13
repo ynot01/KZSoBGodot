@@ -1,6 +1,5 @@
 
 # Godot-specific ignores
-*.import
 *.exe
 .import/
 export.cfg
